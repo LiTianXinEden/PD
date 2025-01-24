@@ -140,7 +140,7 @@ canvas {
 }
 .card-icon {
     backdrop-filter: blur(10px);
-    background-color: #003f3b;
+    background-color: #0c514b;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     justify-content: center;
     text-align: center;
