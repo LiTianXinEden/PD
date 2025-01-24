@@ -1,85 +1,137 @@
-//SCROLLING EFFECT================================
-let introContent = document.getElementById('intro-content');
-let background = document.getElementById('background-image');
-window.addEventListener('scroll', function () {
-    let value = window.scrollY;
 
-    introContent.style.marginTop = value * 0.5 + 'px';
-    background.style.marginTop = value * 0.5 + 'px';
-});
-
-//=============================================
-//TYPING EFFECT================================
-const dynamicText = document.querySelector(".typingeffect h2 span");
-const words = ["HTML", "CSS", "JavaScript"];
-
-let wordIndex = 0;
-let charIndex = 1;
-let isDeleting = false;
-
-const typeEffect = () => {
-    const currentWord = words[wordIndex];
-    const currentChar = currentWord.substring(0, charIndex);
-    console.log(currentWord, currentChar);
-    dynamicText.textContent = currentChar;
-    dynamicText.classList.add("stop-blinking");
-
-    if (!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(typeEffect, 200);
-    } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(typeEffect, 100);
-    } else {
-        isDeleting = !isDeleting;
-        dynamicText.classList.remove("stop-blinking");
-        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(typeEffect, 1200);
-    }
-};
-
-typeEffect();
-
-
-//=============================================
-//TABBED CONTENT================================
-const tabs = document.querySelectorAll('.custom-tab');
-const contentSections = {
-    all: document.getElementById('all-content'),
-    development: document.getElementById('development-content'),
-    design: document.getElementById('design-content')
-};
-// Event listener for each tab
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Remove active class from all tabs and reset z-index
-        tabs.forEach(t => {
-            t.classList.remove('active');
-            t.style.zIndex = ''; // Reset z-index
-        });
-        // Add active class to the clicked tab
-        tab.classList.add('active');
-        
-        // Set custom z-index order
-        if (tab.dataset.tab === "design") {
-            document.querySelector('[data-tab="design"]').style.zIndex = 10;
-            document.querySelector('[data-tab="development"]').style.zIndex = 9;
-            document.querySelector('[data-tab="all"]').style.zIndex = 8;
-        } else if (tab.dataset.tab === "development") {
-            document.querySelector('[data-tab="development"]').style.zIndex = 10;
-            document.querySelector('[data-tab="all"]').style.zIndex = 9;
-            document.querySelector('[data-tab="design"]').style.zIndex = 8;
-        } else {
-            document.querySelector('[data-tab="all"]').style.zIndex = 10;
-            document.querySelector('[data-tab="development"]').style.zIndex = 9;
-            document.querySelector('[data-tab="design"]').style.zIndex = 8;
-        }
-        // Hide all content sections
-        Object.values(contentSections).forEach(section => {
-            section.style.display = 'none';
-        });
-        // Show the selected content section
-        const tabContent = tab.dataset.tab;
-        contentSections[tabContent].style.display = 'block';
+document.querySelectorAll('.card-wrap').forEach(cardWrap => {
+    const cardBg = cardWrap.querySelector('.card-bg');
+    // Set background image from data attribute
+    const bgImage = cardWrap.getAttribute('data-image');
+    cardBg.style.backgroundImage = `url(${bgImage})`;
+    // Mouse movement effect
+    cardWrap.addEventListener('mousemove', (e) => {
+        const rect = cardWrap.getBoundingClientRect();
+        const x = e.clientX - rect.left; // Mouse X relative to card
+        const y = e.clientY - rect.top;  // Mouse Y relative to card
+        const moveX = (x / rect.width - 0.5) * 30; // Increased movement intensity
+        const moveY = (y / rect.height - 0.5) * 30;
+        cardBg.style.transform = `scale(1.15) translateX(${moveX}px) translateY(${moveY}px)`;
     });
-});
+    cardWrap.addEventListener('mouseleave', () => {
+        cardBg.style.transform = `scale(1) translateX(0) translateY(0)`;
+    });
+  });
+  //===============================================
+  // when u scroll and then the content comes in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+  });
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((element) => observer.observe(element));
+  //===============================================
+  // loading modal
+  document.addEventListener('DOMContentLoaded', () => {
+    // Load the modal content from modals.html
+    fetch('modals.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load modals');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Inject the modal HTML into the placeholder
+            document.getElementById('modals-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading modals:', error));
+  });
+  
+  //=============================================
+  let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+  //initiation
+  class firefly{
+  constructor(){
+    this.x = Math.random()*w;
+    this.y = Math.random()*h;
+    this.s = Math.random()*2;
+    this.ang = Math.random()*2*Math.PI;
+    this.v = this.s*this.s/4;
+  }
+  move(){
+    this.x += this.v*Math.cos(this.ang);
+    this.y += this.v*Math.sin(this.ang);
+    this.ang += Math.random()*20*Math.PI/180-10*Math.PI/180;
+  }
+  show(){
+    c.beginPath();
+    c.arc(this.x,this.y,this.s,0,2*Math.PI);
+    c.fillStyle="#fddba3";
+    c.fill();
+  }
+  }
+  let f = [];
+  function draw() {
+  if(f.length < 100){
+    for(let j = 0; j < 10; j++){
+     f.push(new firefly());
+  }
+     }
+  //animation
+  for(let i = 0; i < f.length; i++){
+    f[i].move();
+    f[i].show();
+    if(f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h){
+       f.splice(i,1);
+       }
+  }
+  }
+  let mouse = {};
+  let last_mouse = {};
+  canvas.addEventListener(
+  "mousemove",
+  function(e) {
+    last_mouse.x = mouse.x;
+    last_mouse.y = mouse.y;
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+  },
+  false
+  );
+  function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return c;
+  }
+  window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback);
+    }
+  );
+  });
+  function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+  }
+  window.addEventListener("resize", function() {
+  (w = canvas.width = window.innerWidth),
+  (h = canvas.height = window.innerHeight);
+  loop();
+  });
+  loop();
+  setInterval(loop, 1000 / 60);
+  

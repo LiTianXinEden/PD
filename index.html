@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Animate on Scroll (AOS Library) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-
     <!-- fontAwesome -->
     <script src="https://kit.fontawesome.com/f12b9b337e.js" crossorigin="anonymous"></script>
-
     <!-- Custom CSS and JS -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>My Portfolio Website</title>
+    <title>Eden Li | Portfolio</title>
 </head>
 
 <body>
@@ -27,611 +20,277 @@
     <header class="header">
         <a href="#" class="logo"><img src="img/logoPic_nobg.png" style="height: 50px;"></a>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#aboutSec">About</a>
-            <a href="#portfolioSec">Portfolio</a>
-            <a href="#contactSec">Contact</a>
+            <div class="hidden"><a href="#">Home</a></div>
+            <div class="hidden"><a href="#aboutSec">About</a></div>
+            <div class="hidden"><a href="#portfolioSec">Portfolio</a></div>
+            <div class="hidden"><a href="#contactSec">Contact</a></div>
         </nav>
     </header>
-
     <!-- =============================INTRO SECTION============================= -->
     <section class="Intro">
-        <img src="img/morningroad.jpg" class="background-image" id="background-image">
+        <img src="img/Petrichor V.png" class="background-image" id="background-image">
+        <canvas id="canvas"></canvas>
         <div class="intro-content" id="intro-content">
             <h1>EDEN LI</h1>
-            <!-- Typing Animation -->
-            <div class="typingeffect">
-                <h2>Hi! I'm experienced in <span></span></h2>
+            <h2><i>Aspiring Web Developer</i></h2>
+        </div>
+    </section>
+    <!-- =============================ABOUT SECTION============================= -->
+    <section class="aboutSec" id="aboutSec">
+        <div class="about-content" id="about-content">
+            <div class="row" style="margin: 20px; ">
+                <div class="col-6">
+                    <div style="margin: 20px; ">
+                        <h1 style="text-decoration: underline;">About Me</h1>
+                        <h3>I'm Eden Li, currently a second-year student at Republic Polytechnic, pursuing a diploma in
+                            Digital Design and Development. I'm dedicated to completing my work to the best of my
+                            ability and resilient in the face of challenges. Outside of my studies, I enjoy playing
+                            games in the metroidvania and roguelite genres and going for walks around my neighborhood.
+                        </h3>
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div style="margin: 20px;">
+                        <h1 style="text-decoration: underline; text-align: center;">My Skills</h1>
+                        <div class="card-icon-display">
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-html5"></i>
+                                <p>HTML</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-css3-alt"></i>
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-js"></i>
+                                <p>Javascript</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-python"></i>
+                                <p>Python</p>
+                            </div>
+                        </div>
+                        <div class="card-icon-display">
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-bootstrap"></i>
+                                <p>Bootstrap</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-node"></i>
+                                <p>Node JS</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-react"></i>
+                                <p>React</p>
+                            </div>
+                            <div class="card-icon hidden">
+                                <i class="fa-brands fa-3x fa-figma"></i>
+                                <p>Figma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- =============================ABOUT SECTION============================= -->
-    <div class="aboutSec" id="aboutSec">
-
-        <h1>ABOUT ME</h1>
-        <p>Welcome to my Portfolio Website where you can get to know more about me and my works</p>
-        </p>
-        <!-- Cards with AOS Animation -->
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="custom-about-card">
-                        <h1 style="text-align: left; text-decoration: none;">Hi there!</h1>
-                        <p>I'm Eden Li, currently a second-year student at Republic Polytechnic,
-                            pursuing a diploma in Digital Design and Development.
-                            I'm dedicated to completing my work to the best of my ability and resilient in the face of
-                            challenges.
-                            Outside of my studies, I enjoy playing games in the metroidvania and roguelite genres and
-                            going for walks around my neighborhood.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div class="custom-about-card">
-                        <h1 style="text-decoration: none;">My skills</h1>
-                        <hr>
-                        <div class="custom-skills-container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="grid-item"><i class="fa-brands fa-4x fa-html5"></i></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="grid-item"><i class="fa-brands fa-4x fa-css3-alt"></i></div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="grid-item"><i class="fa-brands fa-4x fa-js"></i></div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="grid-item"><i class="fa-brands fa-4x fa-node-js"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- =============================PORTFOLIO SECTION============================= -->
-    
-    <div class="portfolioSec" id="portfolioSec">
-        <h1>PAST WORKS</h1>
-        <div class="custom-portfolio-container">
-            <div class="custom-tabs">
-                <div class="custom-tab active" data-tab="all" data-tooltip="All">All</div>
-                <div class="custom-tab" data-tab="development" data-tooltip="Development">Development</div>
-                <div class="custom-tab" data-tab="design" data-tooltip="Design">Design</div>
-            </div>
-            <!-- Tab Content Sections -->
-            <div class="custom-tab-content" id="all-content" data-color="green"> <!--================================================-->
-                <div id="card-container" class="container mt-5">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="gradient-border">
-                                <div class="custom-cardDesc">
-                                    <h3>MY PAST WORKS</h3>
-                                    <p>All my past works are featured here with more to come. It features both design
-                                        and development related works
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="custom-card-container">
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>A website for a bakery app</h3>
-                                    <div>
-                                        <p>A website built with Node.js and Express.js using HTML and CSS,
-                                            features role-based access for customers and admins, with layouts tailored
-                                            to each. It uses a phpMyAdmin-managed database for dynamic data handling.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal1">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Designing a Brand Package</h3>
-                                    <div>
-                                        <p>Designing a personal brand package consisting of a name card, chat stickers,
-                                            and a portfolio website using Adobe Illustrator.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal2">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Vr Escape Room Development</h3>
-                                    <div>
-                                        <p>Developing a VR escape room game in Unity with C#, featuring a garage setting
-                                            with sequential puzzles and a GDD for narrative and puzzle structure.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal3">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Digital Banners for Travel Company</h3>
-                                    <div>
-                                        <p>
-                                            Designing an Instagram 3x3 grid banner for a travel company promotion using
-                                            Adobe Photoshop, combining and layering images to create a cohesive design.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal4">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>CRUD Functionality in RESTful website</h3>
-                                    <div>
-                                        <p>A website using a RESTful API to manage a dynamic product catalog,
-                                            implementing
-                                            full CRUD functionality for users to create, read, update, and delete
-                                            products.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal5">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Logo Creation</h3>
-                                    <div>
-                                        <p>
-                                            Creating a personal logo in Adobe Illustrator, using vector graphics for
-                                            scalable quality. The project highlights thoughtful use of color, lines,
-                                            white space, and emphasis, all documented to showcase the design principles
-                                            applied.
-                                        </p>
-                                        <footer>
-                                            <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                                data-bs-target="#modal6">
-                                                More Details
-                                            </button>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-            <div class="custom-tab-content" id="development-content" data-color="yellow" style="display: none;"> <!--================================================-->
-                <div id="card-container" class="container mt-5">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="gradient-border">
-                                <div class="custom-cardDesc">
-                                    <h3>Development Works</h3>
-                                    <p>All my development works are featured here with more to come. It features
-                                        development related works
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="custom-card-container">
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>A website for a bakery app</h3>
-                                    <div>
-                                        <p>A website built with Node.js and Express.js using HTML and CSS,
-                                            features role-based access for customers and admins, with layouts
-                                            tailored
-                                            to each. It uses a phpMyAdmin-managed database for dynamic data
-                                            handling.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal1">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Vr Escape Room Development</h3>
-                                    <div>
-                                        <p>Developing a VR escape room game in Unity with C#, featuring a garage
-                                            setting
-                                            with sequential puzzles and a GDD for narrative and puzzle structure.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal3">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>CRUD Functionality in RESTful website</h3>
-                                    <div>
-                                        <p>A website using a RESTful API to manage a dynamic product catalog,
-                                            implementing
-                                            full CRUD functionality for users to create, read, update, and delete
-                                            products.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal5">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-tab-content" id="design-content" data-color="blue" style="display: none;"> <!--================================================-->
-                <div id="card-container" class="container mt-5">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="gradient-border">
-                                <div class="custom-cardDesc">
-                                    <h3>Design Works</h3>
-                                    <p>All my design works are featured here with more to come.
-                                        It features related works
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="custom-card-container">
-                                <div class="custom-card"> <!--================================================-->
-                                    <h3>Designing a Brand Package</h3>
-                                    <div>
-                                        <p>Designing a personal brand package consisting of a name card, chat
-                                            stickers,
-                                            and a portfolio website using Adobe Illustrator.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal2">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--================================================-->
-                                    <h3>Digital Banners for Travel Company</h3>
-                                    <div>
-                                        <p>
-                                            Designing an Instagram 3x3 grid banner for a travel company promotion
-                                            using
-                                            Adobe Photoshop, combining and layering images to create a cohesive
-                                            design.
-                                        </p>
-                                    </div>
-                                    <footer>
-                                        <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                            data-bs-target="#modal4">
-                                            More Details
-                                        </button>
-                                    </footer>
-                                </div>
-                                <div class="custom-card"> <!--===============-->
-                                    <h3>Logo Creation</h3>
-                                    <div>
-                                        <p>
-                                            Creating a personal logo in Adobe Illustrator, using vector graphics for
-                                            scalable quality. The project highlights thoughtful use of color, lines,
-                                            white space, and emphasis, all documented to showcase the design principles
-                                            applied.
-                                        </p>
-                                        <footer>
-                                            <button type="button" class="btn custom-button" data-bs-toggle="modal"
-                                                data-bs-target="#modal6">
-                                                More Details
-                                            </button>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="portfolioSec" id="portfolioSec">
+        <div class="portfolio-content" id="portfolio-content-content">
+            <h1 style="text-align: center; text-decoration: underline; padding-bottom: 50px">PROJECT WORKS</h1>
         </div>
-    </div>
+        <main>
+            <div class="slider" style="
+                --width: 400px; /* Increased width */
+                --height: 250px; /* Increased height */
+                --quantity: 9;
+            ">
+                <div class="list">
+                    <div class="item" style="--position: 1;">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/adminView.png');"></div>
+                                <div class="custom-card-overlay">
+                                    <h2>Bakery Website</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal1">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 2">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/marketPage.png');">
+                                </div>
+                                <div class="custom-card-overlay">
+                                    <h2>Brand Package</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal2">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 3">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/garageOverview.png');">
+                                </div>
+                                <div class="custom-card-overlay">
+                                    <h2>VR Escape Room</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal3">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 4">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/travelGrid.png');">
+                                </div>
+                                <div class="custom-card-overlay">
+                                    <h2>Digital Banners</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal4">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 5">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/nameCard.png');"></div>
+                                <div class="custom-card-overlay">
+                                    <h2>CRUD Functionality</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal5">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 6">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/logoPic.png');"></div>
+                                <div class="custom-card-overlay">
+                                    <h2>Designing Logos</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal6">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 7">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/typography1.png');">
+                                </div>
+                                <div class="custom-card-overlay">
+                                    <h2>Typography</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal7">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 8">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg"
+                                    style="background-image: url('./img/cafeDeliveryApp_overview.png');"></div>
+                                <div class="custom-card-overlay">
+                                    <h2>Cafe Delivery App</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal8">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 9">
+                        <div class="custom-card-wrap">
+                            <div class="custom-card">
+                                <div class="custom-card-bg" style="background-image: url('./img/travelListApp.png');">
+                                </div>
+                                <div class="custom-card-overlay">
+                                    <h2>Travel List App</h2>
+                                    <button class="btn btn-openModal" data-bs-toggle="modal"
+                                        data-bs-target="#modal9">more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </main>
+        <div>
+            <h3 style="text-align: center; margin: 50px; padding-left: 20px; padding-right: 20px">These are some of my works that I have done over the course of my studies. Click on the buttons to
+                view more information about each project.</h3>
 
+        </div>
 
+    </section>
     <!-- =============================CONTACT SECTION============================= -->
-    <div class="contactSec" id="contactSec">
-        <h1>CONTACT</h1>
-
+    <section class="contactSec" id="contactSec">
+        <h1 style="text-align: center; text-decoration: underline;">CONTACT</h1>
         <div class="custom-contact-container mt-4">
             <div class="row">
                 <!-- First card taking 8 out of 12 columns -->
                 <div class="col-md-6">
-                    <div class="custom-contactForm-container">
-                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                            <div class="contact-form-title">
-                                <h2>Get in touch</h2>
-                                <hr>
-                            </div>
-                            <input type="hidden" name="access_key" value="b4ace35f-30af-4c98-a483-5c0f05264297">
-                            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-                            <textarea name="message" placeholder="Your Message" class="contact-inputs"
-                                required></textarea>
-                            <button type="submit">Send Message</button>
+                    <div class="contactBox">
+                        <div class="custom-contactForm-container hidden">
+                            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                                <div class="contact-form-title">
+                                    <h2>Get in touch</h2>
+                                    <hr>
+                                </div>
+                                <input type="hidden" name="access_key" value="b4ace35f-30af-4c98-a483-5c0f05264297">
+                                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                                <input type="email" name="email" placeholder="Your Email" class="contact-inputs"
+                                    required>
+                                <textarea name="message" placeholder="Your Message" class="contact-inputs"
+                                    required></textarea>
+                                <button type="submit">Send Message</button>
 
-                        </form>
+                            </form>
+                        </div>
                     </div>
+
                 </div>
                 <!-- Second card taking 4 out of 12 columns -->
                 <div class="col-md-6">
-                    <div class="custom-contactDetails-container">
+                    <div class="linkBox">
+                        <div class="custom-contactDetails-container hidden">
+                            <div class="contact-details">
+                                <div class="contact-details-title">
+                                    <h2>Other ways to contact me</h2>
+                                    <hr>
+                                </div>
 
-                        <div class="contact-details">
-                            <div class="contact-details-title">
-                                <h2>Other ways to contact me</h2>
-                                <hr>
-                            </div>
+
+                                <div class="contact-info">
+                                    <span class="contact-item">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <a href="https://www.linkedin.com/in/eden-li-581b16279/" target="_blank">My
+                                            LinkedIn</a>
+                                    </span>
+                                    <span class="contact-item">
+                                        <i class="fa-brands fa-github"></i>
+                                        <a href="https://github.com/LiTianXinEden" target="_blank">My Github</a>
+                                    </span>
 
 
-                            <div class="contact-info">
-                                <span class="contact-item">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <a href="mailto:23018351@myrpedu.sg">23018351@myrpedu.sg</a>
-                                </span>
-                                <span class="contact-item">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    <a href="linkedin.com/in/eden-li-581b16279/">My LinkedIn</a>
-                                </span>
-                                <span class="contact-item">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <p>12345678</p>
-                                </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- =============================MODAL SECTION=============================-->
-    <!-- Modal 1 -->
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="Title1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title1">Website for a Bakery App</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/adminView.png" alt="Admin View" class="img-fluid">
-                    <p>This is a website made with NodeJs and Express.js along with HTML and CSS. It featured a
-                        login
-                        page where you can login as either a customer or an admin and the website layout would
-                        change
-                        according to what you login as. The website makes use of a database, phpMyAdmin, to store
-                        the
-                        data so the data is not hardcoded and can be updated dynamically
-                    </p>
-
-                    <p>Customers will be able to see a navbar that says "Home, Cart and Logout". Customers are able
-                        to
-                        add products to their cart and from the cart, they can add more or remove the product from
-                        their
-                        cart
-                    </p>
-
-                    <p>Unlike Customers, Admins will be able to see "Home, Cart, AdminView, Add Product and Logout"
-                        in
-                        their navbar. Admins will be able to add new products as well as edit any old products such
-                        as
-                        changing its image, price or removing the product as a whole. This will update the database
-                        that
-                        holds the data for this website
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="Title2" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title2">Designing a Brand Package</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/nameCard.png" alt="Name Card" class="img-fluid">
-                    <p>One of my design related works was creating a name card, chat stickers and portfolio website
-                        for
-                        myself. It was created using Adobe Illustrator, which uses vectors to create scalable
-                        illustrations.
-                    </p>
-                    <p>Since I had to note down my thought processes behind each design, each design choice was done
-                        intentionally. For example, I chose a playful theme that makes use of paint splotches and
-                        kept
-                        to that theme to keep it consistent throughout the three items. The colours I chose are also
-                        deliberate as I made use of colour schemes to ensure my colours are consistent and match
-                        well
-                        with each other. I also made used of design principles and design composition to ensure that
-                        my
-                        design is pleasing to the eye
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 3 -->
-    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="Title3" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title3">Development of a VR Escape Room Game in Unity</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/garageOverview.png" alt="Garage Overview" class="img-fluid">
-                    <p>One of my development related projects is to create a VR game in Unity
-                        and code it using Unity's C#.
-                    </p>
-                    <p>The game is a VR Escape Room game set in the garage of an abandoned house. The game's
-                        objective
-                        is for the player to escape by solving puzzles and fixing a Circuit Box that powers the
-                        garage
-                        door.
-                    </p>
-                    <p>I design and coded 4 sequential puzzles for the game that relied on the completion of the
-                        previous puzzle before the player can move on to the next one to help create a sense of
-                        progression. I created a GDD (Game Design Document) that kept me focused on the game’s
-                        theme,
-                        narrative, and puzzle structure, ensuring that each element aligned with the overall
-                        experience
-                        I wanted to create.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 4 -->
-    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="Title4" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title4">Travel Company Digital Banners</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/travelGrid.png" alt="Travel Grid" class="img-fluid">
-                    <p>Another one of my design related projects was to create an Instagram 3x3 grid banner for a
-                        travel
-                        company to gain users attention to their upcoming travel promotion. I created the banner in
-                        Adobe Photoshop by combining and layering different pictures to create this result.
-                    </p>
-                    <p>I used several of Adobe Photoshop's tools to create the image such as the various lasso
-                        tools,
-                        magic wand tool and quick selection tool. I also drew concept sketches for the grid to get a
-                        feel of my vision of the final banner. My concept sketches tried to make use of different
-                        layouts to see how the banner would turn out.
-                    </p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 5 -->
-    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="Title5" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title5">CRUD Functionality in a RESTful Supermarket Website</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/marketPage.png" alt="Market Page" class="img-fluid">
-                    <p>
-                        This is a mini-supermarket website that makes use of a phpMyAdmin database to manage a
-                        dynamic
-                        product catalog, implementing full CRUD functionality in a RESTful environment.
-                    </p>
-                    <p>
-                        Users can perform the following actions:
-                    <ul>
-                        <li>Create: Add new products to the catalog with details such as name, image, quantity, and
-                            price.
-                        </li>
-                        <li>
-                            Read: View the current product catalog, exploring available products with all relevant
-                            information.
-                        </li>
-                        <li>
-                            Update: Modify existing product details, including image, name, quantity, and price,
-                            keeping
-                            the catalog up-to-date.
-                        </li>
-                        <li>
-                            Delete: Remove products from the catalog, instantly reflecting changes in the database.
-                        </li>
-                    </ul>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 6 -->
-    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="Title6" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Title6">Designing my personal Logo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="img/logoPic.png" alt="Logo Picture" class="img-fluid">
-                    <p>
-                        One of my design projects involved creating a personal logo using Adobe Illustrator.
-                        Designed
-                        with vector graphics, the logo maintains high resolution and quality regardless of scale.
-                    </p>
-                    <p>
-                        Similar to the brand package, I had to document my thought processes behind the creation of
-                        my
-                        logo such as the colours I decided to use as well as the Design Principles I chose to
-                        implement.
-                        This logo features the design principles for Lines, Colours, White Space and Emphasis.
-                    </p>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    </section>
+    <div id="modals-placeholder"></div>
 </body>
-
-<script>AOS.init();</script>
 
 </html>
