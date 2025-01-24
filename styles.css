@@ -290,7 +290,7 @@ main {
 }
 
 .btn-openModal:hover {
-    background-color: #0f2a33;
+    background-color: #1f5e75;
 }
 
 
@@ -503,3 +503,12 @@ main {
     filter: blur(0);
     transform: translateX(0);
 } */
+
+
+.linkStyle {
+    color:#0c514b;
+}
+
+.linkStyle:hover {
+    color:#073531;
+}
