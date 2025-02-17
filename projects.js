@@ -1,4 +1,18 @@
+/*
+    This script creates an automatic image slideshow for the image inside the element with id "bakeryApp".
+    It cycles through an array of images every 4 seconds, applying a smooth fade-out effect before changing
+    the image source. 
 
+    When the page loads, the script selects the image element and initializes an image list with three 
+    image paths. A function `changeImage` is used to transition between images: it first applies a fade-out 
+    effect using a CSS class, waits 700 milliseconds for the animation to complete, then updates the image 
+    source and removes the fade-out class to allow a fade-in transition.
+
+    The `setInterval` function ensures that `changeImage` runs every 4 seconds, continuously cycling through 
+    the images in the array.
+    
+    This effect creates a seamless transition, enhancing the visual experience for users.
+*/
 
 //Bakery App (Development)
 document.addEventListener("DOMContentLoaded", function () {

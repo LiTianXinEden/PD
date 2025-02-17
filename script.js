@@ -1,4 +1,9 @@
 
+//===============================================
+/*
+    FROM: infinite carousel scroll for portfolio section
+    tilts the background images when mouse moves on it
+*/
 document.querySelectorAll('.card-wrap').forEach(cardWrap => {
   const cardBg = cardWrap.querySelector('.card-bg');
   // Set background image from data attribute
@@ -17,8 +22,12 @@ document.querySelectorAll('.card-wrap').forEach(cardWrap => {
       cardBg.style.transform = `scale(1) translateX(0) translateY(0)`;
   });
 });
+
 //===============================================
-// when u scroll and then the content comes in
+/*
+    FROM: skills from About section, leftside of contact section
+    when u scroll up and down and then the content comes in everytime u scroll back in
+*/
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -30,8 +39,9 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((element) => observer.observe(element));
+
 //===============================================
-// loading modal
+// loading modal content from modals.html
 document.addEventListener('DOMContentLoaded', () => {
   // Load the modal content from modals.html
   fetch('modals.html')
@@ -49,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //=============================================
+/*
+    FROM: fireflies animation in Home section
+    fireflies animation
+*/
 let c = init("canvas"),
 w = (canvas.width = window.innerWidth),
 h = (canvas.height = window.innerHeight);

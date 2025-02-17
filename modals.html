@@ -1,3 +1,10 @@
+<!--
+    This file contains all the modals for the projects that I have done. 
+    Each modal contains a carousel that shows the different views of the project as well as a brief overview of the project
+-->
+
+
+
 
 <!-- =============================MODAL SECTION=============================-->
 <style>
@@ -8,9 +15,23 @@
         /* Ensures responsiveness */
         height: auto;
     }
+
+    .fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .img {
+        width: 100%;
+        height: 200px;
+        /* Fixed height for uniformity */
+        object-fit: cover;
+        /* Ensures the image fills the space without distortion */
+        border-radius: 8px;
+    }
 </style>
 
-<!-- Modal 1 -->
+<!-- Modal 1 Bakery App (Development)-->
 <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="Title1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -19,7 +40,30 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/adminView.png" alt="Admin View" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/adminView.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/loginPage.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/cartView.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal1"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal1"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -54,7 +98,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 2 -->
+<!-- Modal 2 CRUD supermarket (Development)-->
 <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="Title2" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -63,7 +107,33 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/marketPage.png" alt="Admin View" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/marketPage.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/marketPageAdd.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/marketPageEdit.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/marketPageProduct.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -106,7 +176,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 3 -->
+<!-- Modal 3 VR Escape Room (Development)-->
 <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="Title3" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -115,7 +185,33 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/garageOverview.png" alt="Admin View" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/garageOverview.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/circuitBox.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/shelfView.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tableView.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -148,7 +244,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 4 -->
+<!-- Modal 4 MERN Recipe App (Development)-->
 <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="Title4" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -157,7 +253,34 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/recipeAppHome.png" alt="MERN Stack Recipe App" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal4" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/recipeAppHome.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/recipeAppEdit.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/recipeAppAI1.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/recipeAppAI2.png" class="d-block w-100" alt="Cart View">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal4"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal4"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -204,7 +327,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 5 -->
+<!-- Modal 5 Brand Package (Design)-->
 <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="Title5" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -213,7 +336,36 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/namecard.png" alt="Admin View" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal5" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/namecard.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/stickerSet3.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/stickerSet1.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/portfolioDesign.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/aboutDesign.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal5"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal5"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -246,7 +398,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 6 -->
+<!-- Modal 6 StyleShop UI Kit (Design)-->
 <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="Title6" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -255,7 +407,40 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img src="img/styleShopOverview.png" alt="StyleShop UI Kit" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal6" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/styleShopOverview.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/styleShopHome.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/styleShopClothes.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/styleShopDetails.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/styleShopCart.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/styleShopCheckout.png" class="d-block w-100" alt="Cart View">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal6"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal6"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
@@ -291,7 +476,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 7 -->
+<!-- Modal 7 Typography (Design)-->
 <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="Title7" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -300,19 +485,49 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Optional Image -->
-                <img src="img/typography1.png" alt="typography1" class="img-fluid mb-3">
-                <!-- Category -->
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal7" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/typography1.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/typography2.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/typography3.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/typography_moodboard.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/typography_sketch.png" class="d-block w-100" alt="Cart View">
+                        </div>
+
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal7"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal7"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
                     <p style="margin-top: 10px;">Design</p>
                 </div>
-                <!-- Language & Tools Used -->
+
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Language & Tools Used:</h5>
                     <p style="margin-top: 10px;">Adobe Illustrator, Canva</p>
                 </div>
-                <!-- Overview -->
+
                 <div style="gap: 5px;">
                     <h5>Overview:</h5>
                     <p>These logos were designed in Adobe Illustrator to learn about Typography as well as Visual
@@ -332,7 +547,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 8 -->
+<!-- Modal 8 Cafe Delivery App (Design)-->
 <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="Title8" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -341,19 +556,45 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Optional Image -->
-                <img src="img/cafeDeliveryApp_overview.png" alt="cafeDeliveryApp_overview" class="img-fluid mb-3">
-                <!-- Category -->
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal8" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/cafeApp_overview.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/cafeApp_home.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/cafeApp_notif.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/cafeApp_orderDetails.png" class="d-block w-100" alt="Cart View">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal8"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal8"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Updated Row -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
                     <p style="margin-top: 10px;">Design</p>
                 </div>
-                <!-- Language & Tools Used -->
+
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Language & Tools Used:</h5>
                     <p style="margin-top: 10px;">Figma</p>
                 </div>
-                <!-- Overview -->
+
                 <div style="gap: 5px;">
                     <h5>Overview:</h5>
                     <p>This is a High Fidelity Figma Prototype of a Cafe Delivery App I created called SavePoint
@@ -372,7 +613,7 @@
         </div>
     </div>
 </div>
-<!-- Modal 9 -->
+<!-- Modal 9 HDB rental listings (Development)-->
 <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="Title9" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -381,8 +622,30 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Optional Image -->
-                <img src="img/rentalListingsHome.png" alt="HDB rental listings" class="img-fluid mb-3">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselModal9" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/rentalListingsHome.png" class="d-block w-100" alt="Admin View">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/rentalListingsDetails.png" class="d-block w-100" alt="Login Page">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/rentalListingsSearch1.png" class="d-block w-100" alt="Cart View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal9"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal9"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <!-- Category -->
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <h5>Category:</h5>
