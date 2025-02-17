@@ -1,4 +1,4 @@
-
+/* WHOLE SITE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
@@ -134,6 +134,10 @@ canvas {
 /* =========================================================================== */
 /* =========================================================================== */
 /* CARD ICON */
+/*
+    FROM: skills from About section, leftside of contact section
+    when u scroll up and down and then the content comes in everytime u scroll back in
+*/
 .card-icon-display {
     display: flex;
     padding-left: 80px;
@@ -176,6 +180,11 @@ canvas {
 /* =========================================================================== */
 /* =========================================================================== */
 /* PORTFOLIO SECTION */
+/*
+    FROM: infinite carousel scroll for portfolio section
+    -styling for the cards, the cards wrapper and the animation that controls the speed of the cards
+    -styling for modals
+*/
 .portfolioSec {
     padding-top: 120px;
 }
@@ -304,7 +313,6 @@ main {
     background-color: #0f2a33;
 }
 
-
 @keyframes autoRun {
     from {
         left: 100%;
@@ -314,12 +322,14 @@ main {
     }
 }
 
-
-
-
 /* =========================================================================== */
 /* =========================================================================== */
 /* CONTACT SECTION */
+/*
+    FROM: for form and links in contact section
+    -styling for the contact form that uses web3forms to send an email to my school email
+    -styling for the contact details like the links
+*/
 .contactSec {
     padding: 120px;
     /* margin-bottom: -10px;
@@ -479,7 +489,6 @@ main {
     color: #2a379e;
 }
 
-
 .contactBox .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -502,7 +511,6 @@ main {
     filter: blur(0);
     transform: translateX(0);
 } */
-
 
 .linkStyle {
     color:#0c514b;
